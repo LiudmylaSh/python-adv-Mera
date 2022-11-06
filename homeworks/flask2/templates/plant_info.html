@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PythonAdvMera</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="/static/css/style.css" rel="stylesheet"></link>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">PythonAdvMera</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/add-plant">Add Plant</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container card" style="width: 15%;">
+    <div class="card-body">
+        <h5 class="card-title"> {{ plant["name"] }} </h5>
+        <h6 class="card-subtitle mb-2 text-muted">id {{ plant["id"] }}</h6>
+        <p class="card-text">Location: {{ plant["location"] }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Employee works in the plant:
+            {% for el in employees %}
+                <h5 class="card-title"> {{ el["name"] }} </h5>
+                <h6 class="card-subtitle mb-2 text-muted">id: {{ el["id"] }}</h6>
+            {% endfor %}
+        </li>
+    </ul>
+<div>
+    <ul>
+        <form>
+            <input type="button" value="Go back" onclick="history.back()">
+        </form>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>
