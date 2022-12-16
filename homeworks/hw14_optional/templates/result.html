@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find contacts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Find contacts</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            </div>
+          </div>
+        </nav>
+    <div class="container">
+        <h1 class="text-center"> <img src="https://seeklogo.com/images/C/contacts-ios-logo-95985A43FD-seeklogo.com.png" alt="Contacts" width="40" height="40">  Contacts:</h1>
+        <div class="result-container">
+            {% for res in result %}
+            {{ res | safe }} <!--defined "| safe" filter to use html tags from original page-->
+        {% endfor %}
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
