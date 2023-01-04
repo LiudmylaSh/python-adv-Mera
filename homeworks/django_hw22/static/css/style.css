@@ -1,0 +1,17 @@
+
+.navbar-brand.logo {
+    color: red;
+    font-size: 44px;
+}
+
+nav .sign {
+    float:right;
+}
+nav .user {
+    color: white;
+}
+
+.nav-item {
+    font-size:22px;
+    font-weight: bold;
+}
